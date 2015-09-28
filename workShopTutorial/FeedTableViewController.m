@@ -14,7 +14,7 @@
 
 static NSString * const FeedCellIdentifier = @"FeedCell";
 @interface FeedTableViewController () {
-    ApiConnect *ApiObj;
+    ApiManager *ApiObj;
 }
 @property (strong, nonatomic) IBOutlet UIMenuBtn *sideBarMenuBtn;
 
@@ -32,8 +32,8 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     
     [_sideBarMenuBtn IconAs:FABars withAction:@selector(revealToggle:)];
     [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
-    
-    ApiObj = [ApiConnect new];
+    [self preferredStatusBarStyle];
+    ApiObj = [ApiManager new];
     feedArray = [NSMutableArray new];
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController ) {
@@ -71,31 +71,27 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 
 - (void)getFeedData {
     __block FeedTableViewController *weakSelf = self;
-    [ApiObj getDataWithURL:API_URL uponCompletion:^(NSError *error, NSMutableArray *response) {
+    [ApiObj getFeedUponCompletion:^(NSError *error, NSMutableArray *response) {
         if (error) {
             NSLog(@"ERROR:%@",error);
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
-                NSMutableArray *tempArr = [NSMutableArray new];
                 
-                for (int x = 0; x < 10; x++) {
-                    NSString *username = [[response objectAtIndex:x] objectForKey:@"username"];
-                    NSString *firstname = [[response objectAtIndex:x] objectForKey:@"firstname"];
-                    NSString *lastname = [[response objectAtIndex:x] objectForKey:@"lastname"];
-                    NSString *aboutText = [[response objectAtIndex:x] objectForKey:@"about"];
-                    NSString *imageUrl = [[response objectAtIndex:x] objectForKey:@"picture_large"];
+                for (NSDictionary *responseObj in response) {
+                    NSString *username = [responseObj objectForKey:@"username"];
+                    NSString *firstname = [responseObj objectForKey:@"firstname"];
+                    NSString *lastname = [responseObj objectForKey:@"lastname"];
+                    NSString *aboutText = [responseObj objectForKey:@"about"];
+                    NSString *imageUrl = [responseObj objectForKey:@"picture_large"];
                     FeedObj *obj = [[FeedObj alloc] initWithUserName:username andFirstName:firstname andLastName:lastname andAbout:aboutText andImgURL:imageUrl];
-                    [tempArr addObject:obj];
-                    
+                    [weakSelf.feedArray addObject:obj];
                 }
-                weakSelf.feedArray = [NSMutableArray arrayWithArray:tempArr];
+                
                 [weakSelf.refreshControl endRefreshing];
                 // Reload table data
                 [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
             });
-
         }
-
     }];
 }
 #pragma mark - Table view data source

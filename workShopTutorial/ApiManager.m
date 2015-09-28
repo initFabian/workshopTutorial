@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Fabian Buentello. All rights reserved.
 //
 
-#import "ApiConnect.h"
+#import "ApiManager.h"
 #import "AFNetworking.h"
 
-@implementation ApiConnect {
+@implementation ApiManager {
     AFHTTPRequestOperationManager *manager;
 }
 
@@ -25,10 +25,9 @@
  *
  *  @return CallBack
  */
--(void)getDataWithURL:(NSString *)urlString uponCompletion:(void (^)(NSError *err, NSMutableArray *response))handler {
+-(void)getFeedUponCompletion:(void (^)(NSError *err, NSMutableArray *response))handler {
     _completionHandler = [handler copy];
-    
-    [manager GET:urlString parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
+    [manager GET:getFeed_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
         _completionHandler(nil,response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         _completionHandler(error,nil);

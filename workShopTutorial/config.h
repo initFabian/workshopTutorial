@@ -10,16 +10,15 @@
 #define workShopTutorial_config_h
 
 #import "NSString+FontAwesome.h"
-#import "FAImageView.h"
 #import "SWRevealViewController.h"
-#import "ApiConnect.h"
+#import "ApiManager.h"
 #import "UIMenuBtn.h"
 #import "UIIconBtn.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "apiEndPoints.h"
 
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]    //hex converter
-
-#define API_URL @"http://beta.json-generator.com/api/json/get/4y6GQQCT"
+//hex converter
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define APP_FONT @"AvenirNext-Light"
 
@@ -43,6 +42,8 @@
 #define twitterGrey UIColorFromRGB(0x66757f)
 #define twitterLightGrey UIColorFromRGB(0xccd6dd)
 #define twitterSuperLightGrey UIColorFromRGB(0xe1e8ed)
+
+
 
 //FACEBOOK COLORS
 #define facebookColor UIColorFromRGB(0x3b5998)

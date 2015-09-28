@@ -641,7 +641,7 @@ const int FrontViewPositionNone = 0xff;
 
 - (void)_initDefaultProperties
 {
-#warning comments made
+#warning Changed amount of FrontView Reveal
     _frontViewPosition = FrontViewPositionLeft;
     _rearViewPosition = FrontViewPositionLeft;
     _rightViewPosition = FrontViewPositionLeft;

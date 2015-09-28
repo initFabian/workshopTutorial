@@ -11,13 +11,13 @@
 #import "TPKeyboardAvoidingScrollView.h"
 
 @interface FormViewController ()
-@property (strong, nonatomic) IBOutlet UIMenuBtn *sideBarMenuBtn;
+@property (weak, nonatomic) IBOutlet UIMenuBtn *sideBarMenuBtn;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
-@property (strong, nonatomic) IBOutlet UIIconBtn *loginButton;
-@property (strong, nonatomic) IBOutlet UIIconBtn *fbButton;
-@property (strong, nonatomic) IBOutlet UIIconBtn *twitterButton;
-@property (strong, nonatomic) IBOutlet UIIconBtn *linkedInButton;
+@property (weak, nonatomic) IBOutlet UIIconBtn *loginButton;
+@property (weak, nonatomic) IBOutlet UIIconBtn *fbButton;
+@property (weak, nonatomic) IBOutlet UIIconBtn *twitterButton;
+@property (weak, nonatomic) IBOutlet UIIconBtn *linkedInButton;
 
 @end
 
@@ -51,6 +51,15 @@
     else
         [view becomeFirstResponder];
     return YES;
+}
+- (IBAction)FB_Clicked:(id)sender {
+    NSLog(@"%@ was pressed!",[sender titleLabel].text);
+}
+- (IBAction)twitter_Clicked:(id)sender {
+    NSLog(@"%@ was pressed!",[sender titleLabel].text);
+}
+- (IBAction)linkedIn_Clicked:(id)sender {
+    NSLog(@"%@ was pressed!",[sender titleLabel].text);
 }
 
 - (void)didReceiveMemoryWarning {

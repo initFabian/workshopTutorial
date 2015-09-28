@@ -14,7 +14,6 @@
 		3130164A1BAABD3700272B0A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 313016491BAABD3700272B0A /* Images.xcassets */; };
 		3130164D1BAABD3700272B0A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3130164B1BAABD3700272B0A /* LaunchScreen.xib */; };
 		313016591BAABD3700272B0A /* workShopTutorialTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016581BAABD3700272B0A /* workShopTutorialTests.m */; };
-		313016641BAAC0AC00272B0A /* ApiConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016631BAAC0AC00272B0A /* ApiConnect.m */; };
 		313016671BAAC0F300272B0A /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016661BAAC0F300272B0A /* FeedTableViewController.m */; };
 		3130166A1BAAC14A00272B0A /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016691BAAC14A00272B0A /* FeedCell.m */; };
 		3130166F1BAAC81500272B0A /* FeedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130166E1BAAC81500272B0A /* FeedObj.m */; };
@@ -26,6 +25,7 @@
 		31A69FDA1BB3DAB700E8B6BA /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD81BB3DAB700E8B6BA /* menu@2x.png */; settings = {ASSET_TAGS = (); }; };
 		31A69FDF1BB3E95600E8B6BA /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FDE1BB3E95600E8B6BA /* FormViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A69FE31BB3EA3C00E8B6BA /* UIMenuBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FE21BB3EA3C00E8B6BA /* UIMenuBtn.m */; settings = {ASSET_TAGS = (); }; };
+		31E726141BB9113D00CB021B /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E726131BB9113D00CB021B /* ApiManager.m */; settings = {ASSET_TAGS = (); }; };
 		31EA45961BB44A0E00DF5395 /* UIIconBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EA45951BB44A0E00DF5395 /* UIIconBtn.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -52,8 +52,6 @@
 		313016521BAABD3700272B0A /* workShopTutorialTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = workShopTutorialTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		313016571BAABD3700272B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		313016581BAABD3700272B0A /* workShopTutorialTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = workShopTutorialTests.m; sourceTree = "<group>"; };
-		313016621BAAC0AC00272B0A /* ApiConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiConnect.h; sourceTree = "<group>"; };
-		313016631BAAC0AC00272B0A /* ApiConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiConnect.m; sourceTree = "<group>"; };
 		313016651BAAC0F300272B0A /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		313016661BAAC0F300272B0A /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		313016681BAAC14A00272B0A /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
@@ -74,6 +72,9 @@
 		31A69FDE1BB3E95600E8B6BA /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		31A69FE11BB3EA3C00E8B6BA /* UIMenuBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMenuBtn.h; sourceTree = "<group>"; };
 		31A69FE21BB3EA3C00E8B6BA /* UIMenuBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMenuBtn.m; sourceTree = "<group>"; };
+		31E726121BB9113D00CB021B /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
+		31E726131BB9113D00CB021B /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
+		31E887D31BB90E00009D66EB /* apiEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = apiEndPoints.h; sourceTree = "<group>"; };
 		31EA45941BB44A0E00DF5395 /* UIIconBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIIconBtn.h; sourceTree = "<group>"; };
 		31EA45951BB44A0E00DF5395 /* UIIconBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIIconBtn.m; sourceTree = "<group>"; };
 		B87BA06A341023056F36C16F /* Pods-workShopTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workShopTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-workShopTutorial/Pods-workShopTutorial.debug.xcconfig"; sourceTree = "<group>"; };
@@ -179,8 +180,6 @@
 			children = (
 				31A69FBE1BB31C5C00E8B6BA /* DetailViewController.h */,
 				31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */,
-				3130166D1BAAC81500272B0A /* FeedObj.h */,
-				3130166E1BAAC81500272B0A /* FeedObj.m */,
 				313016681BAAC14A00272B0A /* FeedCell.h */,
 				313016691BAAC14A00272B0A /* FeedCell.m */,
 				313016651BAAC0F300272B0A /* FeedTableViewController.h */,
@@ -201,10 +200,13 @@
 		31A69FDB1BB3DF0A00E8B6BA /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
-				313016621BAAC0AC00272B0A /* ApiConnect.h */,
-				313016631BAAC0AC00272B0A /* ApiConnect.m */,
+				31E726121BB9113D00CB021B /* ApiManager.h */,
+				31E726131BB9113D00CB021B /* ApiManager.m */,
+				3130166D1BAAC81500272B0A /* FeedObj.h */,
+				3130166E1BAAC81500272B0A /* FeedObj.m */,
 				3130166C1BAAC77B00272B0A /* config.h */,
-				31EA45931BB449CD00DF5395 /* Custom Buttons */,
+				31E887D31BB90E00009D66EB /* apiEndPoints.h */,
+				31EA45931BB449CD00DF5395 /* Buttons */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -227,7 +229,7 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
-		31EA45931BB449CD00DF5395 /* Custom Buttons */ = {
+		31EA45931BB449CD00DF5395 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				31A69FE11BB3EA3C00E8B6BA /* UIMenuBtn.h */,
@@ -235,7 +237,7 @@
 				31EA45941BB44A0E00DF5395 /* UIIconBtn.h */,
 				31EA45951BB44A0E00DF5395 /* UIIconBtn.m */,
 			);
-			name = "Custom Buttons";
+			name = Buttons;
 			sourceTree = "<group>";
 		};
 		91EE4A676C0EAADD571B682B /* Pods */ = {
@@ -392,8 +394,8 @@
 				3130166A1BAAC14A00272B0A /* FeedCell.m in Sources */,
 				3130163F1BAABD3700272B0A /* main.m in Sources */,
 				31A69FE31BB3EA3C00E8B6BA /* UIMenuBtn.m in Sources */,
-				313016641BAAC0AC00272B0A /* ApiConnect.m in Sources */,
 				31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */,
+				31E726141BB9113D00CB021B /* ApiManager.m in Sources */,
 				31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */,
 				313016671BAAC0F300272B0A /* FeedTableViewController.m in Sources */,
 				31A69FC01BB31C5C00E8B6BA /* DetailViewController.m in Sources */,
@@ -475,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -513,7 +515,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -526,7 +528,10 @@
 			baseConfigurationReference = B87BA06A341023056F36C16F /* Pods-workShopTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"FRAMEWORK_SEARCH_PATHS[sdk=*]" = "";
 				INFOPLIST_FILE = workShopTutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Buentello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,7 +543,10 @@
 			baseConfigurationReference = 2301150BCD6CBACC10994C44 /* Pods-workShopTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = workShopTutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Buentello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -549,10 +557,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -569,10 +573,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = workShopTutorialTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Buentello.$(PRODUCT_NAME:rfc1034identifier)";

@@ -9,10 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "config.h"
 
-@interface ApiConnect : NSObject {
+@interface ApiManager : NSObject {
     void (^_completionHandler)(NSError *err, NSMutableArray *response);
 }
 
-- (void) getDataWithURL:(NSString *)urlString
-         uponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
+- (void) getFeedUponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
 @end
