@@ -69,7 +69,6 @@
 		31A69FDE1BB3E95600E8B6BA /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		31E726121BB9113D00CB021B /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		31E726131BB9113D00CB021B /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
-		31E887D31BB90E00009D66EB /* apiEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = apiEndPoints.h; sourceTree = "<group>"; };
 		B87BA06A341023056F36C16F /* Pods-workShopTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workShopTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-workShopTutorial/Pods-workShopTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E75B68D8023FEB60BB5D74 /* libPods-workShopTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-workShopTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,7 +193,6 @@
 			children = (
 				31E726121BB9113D00CB021B /* ApiManager.h */,
 				31E726131BB9113D00CB021B /* ApiManager.m */,
-				31E887D31BB90E00009D66EB /* apiEndPoints.h */,
 				31EA45931BB449CD00DF5395 /* Buttons */,
 			);
 			name = CustomClasses;
