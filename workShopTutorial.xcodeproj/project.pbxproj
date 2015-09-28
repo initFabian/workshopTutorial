@@ -193,7 +193,6 @@
 			children = (
 				31E726121BB9113D00CB021B /* ApiManager.h */,
 				31E726131BB9113D00CB021B /* ApiManager.m */,
-				31EA45931BB449CD00DF5395 /* Buttons */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -225,13 +224,6 @@
 				3130166E1BAAC81500272B0A /* FeedObj.m */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		31EA45931BB449CD00DF5395 /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Buttons;
 			sourceTree = "<group>";
 		};
 		91EE4A676C0EAADD571B682B /* Pods */ = {
