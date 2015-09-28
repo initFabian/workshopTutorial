@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "config.h"
+
+#warning FIX: Colors
+//#import "config.h"
 
 @interface AppDelegate ()
 
@@ -18,15 +20,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: whiteColor}];
-//    [[UIApplication sharedApplication] setStatusBarStyle:statusBarColor];
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}]; //FIXME: whiteColor;
     
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
                                       forBarPosition:UIBarPositionAny
                                           barMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    [[UINavigationBar appearance] setBackgroundColor:mainColor];
+    [[UINavigationBar appearance] setBackgroundColor:[UIColor colorWithRed:129.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1.0]]; //FIXME: mainColor;
     return YES;
 }
 

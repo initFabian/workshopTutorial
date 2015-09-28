@@ -9,6 +9,10 @@
 #import "SidebarViewController.h"
 #import "SWRevealViewController.h"
 
+#warning FIX: Colors
+//#import "config.h"
+#import "NSString+FontAwesome.h"
+
 @interface SidebarViewController (){
     NSArray *menuItems;
 }
@@ -29,7 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.tableView.backgroundColor = sideBarBackground;
+    self.tableView.backgroundColor =[UIColor colorWithRed:63.0/255.0 green:63.0/255.0 blue:63.0/255.0 alpha:1.0]; //FIXME: sideBarBackground;
     menuItems = @[@"feed",@"form"];
 }
 
@@ -58,7 +62,7 @@
     NSString *CellIdentifier = [menuItems objectAtIndex:indexPath.row];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.textLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:50];
-    cell.textLabel.textColor = subColor;
+    cell.textLabel.textColor = [UIColor colorWithRed:240.0/255.0 green:73.0/255.0 blue:67.0/255.0 alpha:1.0]; //FIXME: subColor;
     
     switch (indexPath.row) {
         case 0:
@@ -73,7 +77,7 @@
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
+
     // Set the title of navigation bar by using the menu items
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     UINavigationController *destViewController = (UINavigationController*)segue.destinationViewController;

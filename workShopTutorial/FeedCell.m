@@ -8,7 +8,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import "FeedCell.h"
-#import "config.h"
+//#import "config.h"
+
+#warning FIX: Colors
 
 @implementation FeedCell
 @synthesize userName,fullName,userImage,aboutText;
@@ -18,10 +20,12 @@
     userImage.layer.cornerRadius = userImage.frame.size.width/2;
     userImage.layer.borderWidth = 2.0;
     userImage.layer.masksToBounds = YES;
-    userImage.layer.borderColor = [subColor CGColor];
-    fullName.textColor = twitterColor;
-    userName.textColor = twitterGrey;
-    aboutText.textColor = twitterDark;
+
+
+    userImage.layer.borderColor = [[UIColor colorWithRed:240.0/255.0 green:73.0/255.0 blue:67.0/255.0 alpha:1.0] CGColor]; //FIXME: [subColor CGColor];
+    fullName.textColor = [UIColor colorWithRed:85.0/255.0 green:172.0/255.0 blue:238.0/255.0 alpha:1.0]; //FIXME: twitterColor
+    userName.textColor = [UIColor colorWithRed:102.0/255.0 green:117.0/255.0 blue:127.0/255.0 alpha:1.0]; //FIXME: twitterGrey
+    aboutText.textColor = [UIColor colorWithRed:41.0/255.0 green:47.0/255.0 blue:51.0/255.0 alpha:1.0]; //FIXME: twitterDark
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -29,5 +33,9 @@
 
     // Configure the view for the selected state
 }
+
+
+
+
 
 @end

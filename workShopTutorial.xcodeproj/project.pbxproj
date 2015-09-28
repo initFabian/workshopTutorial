@@ -24,9 +24,7 @@
 		31A69FD91BB3DAB700E8B6BA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD71BB3DAB700E8B6BA /* menu.png */; settings = {ASSET_TAGS = (); }; };
 		31A69FDA1BB3DAB700E8B6BA /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD81BB3DAB700E8B6BA /* menu@2x.png */; settings = {ASSET_TAGS = (); }; };
 		31A69FDF1BB3E95600E8B6BA /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FDE1BB3E95600E8B6BA /* FormViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A69FE31BB3EA3C00E8B6BA /* UIMenuBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FE21BB3EA3C00E8B6BA /* UIMenuBtn.m */; settings = {ASSET_TAGS = (); }; };
 		31E726141BB9113D00CB021B /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E726131BB9113D00CB021B /* ApiManager.m */; settings = {ASSET_TAGS = (); }; };
-		31EA45961BB44A0E00DF5395 /* UIIconBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EA45951BB44A0E00DF5395 /* UIIconBtn.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +54,6 @@
 		313016661BAAC0F300272B0A /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
 		313016681BAAC14A00272B0A /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		313016691BAAC14A00272B0A /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
-		3130166C1BAAC77B00272B0A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
 		3130166D1BAAC81500272B0A /* FeedObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedObj.h; sourceTree = "<group>"; };
 		3130166E1BAAC81500272B0A /* FeedObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedObj.m; sourceTree = "<group>"; };
 		313016701BAACDB400272B0A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
@@ -70,13 +67,9 @@
 		31A69FD81BB3DAB700E8B6BA /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		31A69FDD1BB3E95600E8B6BA /* FormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormViewController.h; sourceTree = "<group>"; };
 		31A69FDE1BB3E95600E8B6BA /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
-		31A69FE11BB3EA3C00E8B6BA /* UIMenuBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMenuBtn.h; sourceTree = "<group>"; };
-		31A69FE21BB3EA3C00E8B6BA /* UIMenuBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIMenuBtn.m; sourceTree = "<group>"; };
 		31E726121BB9113D00CB021B /* ApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiManager.h; sourceTree = "<group>"; };
 		31E726131BB9113D00CB021B /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		31E887D31BB90E00009D66EB /* apiEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = apiEndPoints.h; sourceTree = "<group>"; };
-		31EA45941BB44A0E00DF5395 /* UIIconBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIIconBtn.h; sourceTree = "<group>"; };
-		31EA45951BB44A0E00DF5395 /* UIIconBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIIconBtn.m; sourceTree = "<group>"; };
 		B87BA06A341023056F36C16F /* Pods-workShopTutorial.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-workShopTutorial.debug.xcconfig"; path = "Pods/Target Support Files/Pods-workShopTutorial/Pods-workShopTutorial.debug.xcconfig"; sourceTree = "<group>"; };
 		F7E75B68D8023FEB60BB5D74 /* libPods-workShopTutorial.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-workShopTutorial.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,12 +171,11 @@
 		3130166B1BAAC16300272B0A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				31A69FBE1BB31C5C00E8B6BA /* DetailViewController.h */,
-				31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */,
-				313016681BAAC14A00272B0A /* FeedCell.h */,
-				313016691BAAC14A00272B0A /* FeedCell.m */,
+				31E726161BB9539300CB021B /* Cell */,
 				313016651BAAC0F300272B0A /* FeedTableViewController.h */,
 				313016661BAAC0F300272B0A /* FeedTableViewController.m */,
+				31A69FBE1BB31C5C00E8B6BA /* DetailViewController.h */,
+				31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */,
 			);
 			name = Feed;
 			sourceTree = "<group>";
@@ -202,9 +194,6 @@
 			children = (
 				31E726121BB9113D00CB021B /* ApiManager.h */,
 				31E726131BB9113D00CB021B /* ApiManager.m */,
-				3130166D1BAAC81500272B0A /* FeedObj.h */,
-				3130166E1BAAC81500272B0A /* FeedObj.m */,
-				3130166C1BAAC77B00272B0A /* config.h */,
 				31E887D31BB90E00009D66EB /* apiEndPoints.h */,
 				31EA45931BB449CD00DF5395 /* Buttons */,
 			);
@@ -229,13 +218,20 @@
 			name = Libraries;
 			sourceTree = "<group>";
 		};
+		31E726161BB9539300CB021B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				313016681BAAC14A00272B0A /* FeedCell.h */,
+				313016691BAAC14A00272B0A /* FeedCell.m */,
+				3130166D1BAAC81500272B0A /* FeedObj.h */,
+				3130166E1BAAC81500272B0A /* FeedObj.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		31EA45931BB449CD00DF5395 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				31A69FE11BB3EA3C00E8B6BA /* UIMenuBtn.h */,
-				31A69FE21BB3EA3C00E8B6BA /* UIMenuBtn.m */,
-				31EA45941BB44A0E00DF5395 /* UIIconBtn.h */,
-				31EA45951BB44A0E00DF5395 /* UIIconBtn.m */,
 			);
 			name = Buttons;
 			sourceTree = "<group>";
@@ -388,12 +384,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				313016421BAABD3700272B0A /* AppDelegate.m in Sources */,
-				31EA45961BB44A0E00DF5395 /* UIIconBtn.m in Sources */,
 				31A69FDF1BB3E95600E8B6BA /* FormViewController.m in Sources */,
 				3130166F1BAAC81500272B0A /* FeedObj.m in Sources */,
 				3130166A1BAAC14A00272B0A /* FeedCell.m in Sources */,
 				3130163F1BAABD3700272B0A /* main.m in Sources */,
-				31A69FE31BB3EA3C00E8B6BA /* UIMenuBtn.m in Sources */,
 				31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */,
 				31E726141BB9113D00CB021B /* ApiManager.m in Sources */,
 				31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */,

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "config.h"
 
 @interface SidebarViewController : UITableViewController
 

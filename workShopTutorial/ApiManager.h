@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "config.h"
+//#import "config.h"
 
 @interface ApiManager : NSObject {
     void (^_completionHandler)(NSError *err, NSMutableArray *response);
+    void (^_dataHandler)(bool error, NSMutableArray *response);
 }
 
-- (void) getFeedUponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
+- (void) getDataWithURL:(NSString *)urlString
+         uponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
 @end

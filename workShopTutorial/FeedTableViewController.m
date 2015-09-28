@@ -7,16 +7,24 @@
 //
 
 #import "FeedTableViewController.h"
-#import "config.h"
 #import "FeedCell.h"
 #import "FeedObj.h"
 #import "DetailViewController.h"
+
+#warning FIX: Colors
+#warning FIX: Button(Sidebar)
+#warning FIX: API Call
+//#import "config.h"
+#import "ApiManager.h"
+#import "SWRevealViewController.h"
+#import "NSString+FontAwesome.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 static NSString * const FeedCellIdentifier = @"FeedCell";
 @interface FeedTableViewController () {
     ApiManager *ApiObj;
 }
-@property (strong, nonatomic) IBOutlet UIMenuBtn *sideBarMenuBtn;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarMenuBtn;
 
 @end
 
@@ -30,7 +38,16 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [_sideBarMenuBtn IconAs:FABars withAction:@selector(revealToggle:)];
+    NSDictionary *attributes = @{
+                                 NSForegroundColorAttributeName: [UIColor colorWithRed:240.0/255.0 green:73.0/255.0 blue:67.0/255.0 alpha:1.0],
+                                 NSFontAttributeName: [UIFont fontWithName:kFontAwesomeFamilyName size:20.0f]
+                                 };
+    
+    [_sideBarMenuBtn setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    _sideBarMenuBtn.title = [NSString fontAwesomeIconStringForEnum:FABars];
+    [_sideBarMenuBtn setAction:@selector(revealToggle:)];
+    [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
+    
     [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
     [self preferredStatusBarStyle];
     ApiObj = [ApiManager new];
@@ -46,7 +63,8 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     [self.refreshControl addTarget:self
                             action:@selector(pulledRefresh)
                   forControlEvents:UIControlEventValueChanged];
-    self.navigationController.navigationBar.barTintColor = mainColor;
+    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:129.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1.0];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,7 +89,8 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 
 - (void)getFeedData {
     __block FeedTableViewController *weakSelf = self;
-    [ApiObj getFeedUponCompletion:^(NSError *error, NSMutableArray *response) {
+//FIXME: embedded URL
+    [ApiObj getDataWithURL:@"http://beta.json-generator.com/api/json/get/4y6GQQCT" uponCompletion:^(NSError *error, NSMutableArray *response) {
         if (error) {
             NSLog(@"ERROR:%@",error);
         } else {
@@ -184,18 +203,10 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     return UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation);
 }
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if ([self isLandscapeOrientation]) {
-        if ([self hasImageAtIndexPath:indexPath]) {
-            return 100.0f;
-        } else {
-            return 120.0f;
-        }
+    if ([self hasImageAtIndexPath:indexPath]) {
+        return 180.0f;
     } else {
-        if ([self hasImageAtIndexPath:indexPath]) {
-            return 180.0f;
-        } else {
-            return 155.0f;
-        }
+        return 155.0f;
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

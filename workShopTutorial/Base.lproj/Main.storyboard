@@ -104,7 +104,7 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Feed" id="XCb-Yc-N6Y">
-                        <barButtonItem key="leftBarButtonItem" title="menu" id="UzE-RF-Tk5" customClass="UIMenuBtn"/>
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="UzE-RF-Tk5"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="YTA-ZY-daU">
                         <autoresizingMask key="autoresizingMask"/>
@@ -142,7 +142,7 @@
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="77" translatesAutoresizingMaskIntoConstraints="NO" id="w17-pj-YYW">
                                         <rect key="frame" x="0.0" y="107" width="600" height="93"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAL-9A-FSR" customClass="UIIconBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAL-9A-FSR">
                                                 <rect key="frame" x="180" y="25" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="5hr-l8-bTn"/>
@@ -153,7 +153,7 @@
                                                     <action selector="phoneButtonPressed:" destination="MLF-uK-pZP" eventType="touchUpInside" id="baj-uw-WMP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSx-uI-KW9" customClass="UIIconBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSx-uI-KW9">
                                                 <rect key="frame" x="365" y="25" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="1OF-gV-fFp"/>
@@ -163,7 +163,7 @@
                                                     <action selector="thumbButtonPressed:" destination="MLF-uK-pZP" eventType="touchUpInside" id="Bov-59-xcb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UV-1O-vOP" customClass="UIIconBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UV-1O-vOP">
                                                 <rect key="frame" x="270" y="25" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="gL3-fy-4eW"/>
@@ -274,7 +274,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Yw6-I7-fTc">
-                        <barButtonItem key="leftBarButtonItem" title="backBtn" id="ipf-yT-5sF" customClass="UIMenuBtn"/>
+                        <barButtonItem key="leftBarButtonItem" title="backBtn" id="ipf-yT-5sF"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -344,7 +344,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-z3-euC" customClass="UIIconBtn">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-z3-euC">
                                 <rect key="frame" x="20" y="298" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -359,7 +359,7 @@
                                     <action selector="FB_Clicked:" destination="CZz-3R-Gm2" eventType="touchUpInside" id="OlH-Mz-cbc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR8-mQ-dWv" customClass="UIIconBtn">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rR8-mQ-dWv">
                                 <rect key="frame" x="20" y="356" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -374,7 +374,7 @@
                                     <action selector="twitter_Clicked:" destination="CZz-3R-Gm2" eventType="touchUpInside" id="LtB-eU-ueo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-jP-9Aj" customClass="UIIconBtn">
+                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOi-jP-9Aj">
                                 <rect key="frame" x="20" y="414" width="560" height="50"/>
                                 <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -389,7 +389,7 @@
                                     <action selector="linkedIn_Clicked:" destination="CZz-3R-Gm2" eventType="touchUpInside" id="hH9-KS-mQi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="53" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-gn-B0e" customClass="UIIconBtn">
+                            <button opaque="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="53" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ac-gn-B0e">
                                 <rect key="frame" x="20" y="162" width="560" height="53"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -455,7 +455,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Login" id="zCd-Ap-CMe">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="vjn-7I-ezt" customClass="UIMenuBtn"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="vjn-7I-ezt"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="WpI-1y-XHl" id="vYA-5n-PyH"/>
