@@ -20,10 +20,16 @@ $ sudo gem install cocoapods
 ```
 
 ### Cloning The GitHub Repository
-The recommended way to get workshopTutorial is to use git to directly clone the workshopTutorial repository:
+The recommended way to get workshopTutorial is to use git to directly clone the workshopTutorial repository **and start off at Chapter 1**:
 
 ```bash
-$ git clone https://github.com/fbuentello/workshopTutorial.git
+$ git clone https://github.com/fbuentello/workshopTutorial.git -b startChapter1
+```
+
+Don't forget to `cd` into the directory:
+
+```bash
+cd workshopTutorial/
 ```
 
 ## Quick Install
@@ -38,6 +44,13 @@ $ pod install
 ```
 This may take a minute, but once complete, you should have a few new files in your directory. Be sure to close out any Xcode sessions as it should say on the terminal:
 
-```bash
-[!] Please close any current Xcode sessions and use `workShopTutorial.xcworkspace` for this project from now on.
+``` bash
+"[!] Please close any current Xcode sessions and use `workShopTutorial.xcworkspace` for this project from now on."
 ```
+Next open up the `workShopTutorial.xcworkspace` in Xcode, and Let's get started.
+
+##Chapter 1
+
+With the project open, **Run/Build** the tutorial on the simulator. Everything works fine, but as you see, we're getting some warnings. Don't worry, I put those warning there.
+
+![Chapter 1 Warnings](./images/Ch1_1_warnings.png)
