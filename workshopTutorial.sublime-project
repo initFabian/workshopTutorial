@@ -2,7 +2,10 @@
 	"folders":
 	[
 		{
-			"path": "./workShopTutorial"
+			"path": "."
+		},
+		{
+			"path": "/Users/fabianBuentello/Desktop/workshopTutorial/workShopTutorial"
 		}
 	]
 }

@@ -11,14 +11,9 @@
 #import "FeedObj.h"
 #import "DetailViewController.h"
 
-#warning FIX: Colors
 #warning FIX: Button(Sidebar)
 #warning FIX: API Call
-//#import "config.h"
-#import "ApiManager.h"
-#import "SWRevealViewController.h"
-#import "NSString+FontAwesome.h"
-#import <SDWebImage/UIImageView+WebCache.h>
+#import "config.h"
 
 static NSString * const FeedCellIdentifier = @"FeedCell";
 @interface FeedTableViewController () {
@@ -39,7 +34,7 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     [super viewDidLoad];
     
     NSDictionary *attributes = @{
-                                 NSForegroundColorAttributeName: [UIColor colorWithRed:240.0/255.0 green:73.0/255.0 blue:67.0/255.0 alpha:1.0],
+                                 NSForegroundColorAttributeName: subColor,
                                  NSFontAttributeName: [UIFont fontWithName:kFontAwesomeFamilyName size:20.0f]
                                  };
     
@@ -63,7 +58,7 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     [self.refreshControl addTarget:self
                             action:@selector(pulledRefresh)
                   forControlEvents:UIControlEventValueChanged];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:129.0/255.0 green:212.0/255.0 blue:220.0/255.0 alpha:1.0];
+    self.navigationController.navigationBar.barTintColor = baseColor;
 
 }
 
