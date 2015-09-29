@@ -18,6 +18,8 @@
 		3130166A1BAAC14A00272B0A /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016691BAAC14A00272B0A /* FeedCell.m */; };
 		3130166F1BAAC81500272B0A /* FeedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130166E1BAAC81500272B0A /* FeedObj.m */; };
 		313016711BAACDB400272B0A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 313016701BAACDB400272B0A /* placeholder.png */; };
+		3139775E1BBB348C0038479A /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3139775D1BBB348C0038479A /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
+		313977611BBB34A30038479A /* UICustomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 313977601BBB34A30038479A /* UICustomMenuButton.m */; settings = {ASSET_TAGS = (); }; };
 		31A69FC01BB31C5C00E8B6BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FC81BB3D88A00E8B6BA /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
 		31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FCB1BB3D8B800E8B6BA /* SidebarViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -57,6 +59,10 @@
 		3130166D1BAAC81500272B0A /* FeedObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedObj.h; sourceTree = "<group>"; };
 		3130166E1BAAC81500272B0A /* FeedObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedObj.m; sourceTree = "<group>"; };
 		313016701BAACDB400272B0A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		3139775C1BBB348C0038479A /* UICustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomButton.h; sourceTree = "<group>"; };
+		3139775D1BBB348C0038479A /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
+		3139775F1BBB34A30038479A /* UICustomMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomMenuButton.h; sourceTree = "<group>"; };
+		313977601BBB34A30038479A /* UICustomMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomMenuButton.m; sourceTree = "<group>"; };
 		31A69FBE1BB31C5C00E8B6BA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		31A69FC71BB3D88A00E8B6BA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -197,6 +203,10 @@
 				31E726131BB9113D00CB021B /* ApiManager.m */,
 				31B77E331BB9F927004A0F69 /* Colors.h */,
 				31B77E341BB9F931004A0F69 /* Config.h */,
+				3139775C1BBB348C0038479A /* UICustomButton.h */,
+				3139775D1BBB348C0038479A /* UICustomButton.m */,
+				3139775F1BBB34A30038479A /* UICustomMenuButton.h */,
+				313977601BBB34A30038479A /* UICustomMenuButton.m */,
 			);
 			name = CustomClasses;
 			sourceTree = "<group>";
@@ -384,7 +394,9 @@
 				3130163F1BAABD3700272B0A /* main.m in Sources */,
 				31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */,
 				31E726141BB9113D00CB021B /* ApiManager.m in Sources */,
+				3139775E1BBB348C0038479A /* UICustomButton.m in Sources */,
 				31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */,
+				313977611BBB34A30038479A /* UICustomMenuButton.m in Sources */,
 				313016671BAAC0F300272B0A /* FeedTableViewController.m in Sources */,
 				31A69FC01BB31C5C00E8B6BA /* DetailViewController.m in Sources */,
 			);

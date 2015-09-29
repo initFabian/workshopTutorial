@@ -104,7 +104,7 @@
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Feed" id="XCb-Yc-N6Y">
-                        <barButtonItem key="leftBarButtonItem" title="menu" id="UzE-RF-Tk5"/>
+                        <barButtonItem key="leftBarButtonItem" title="menu" id="UzE-RF-Tk5" customClass="UICustomMenuButton"/>
                     </navigationItem>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="YTA-ZY-daU">
                         <autoresizingMask key="autoresizingMask"/>
@@ -142,18 +142,7 @@
                                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="600" placeholderIntrinsicHeight="77" translatesAutoresizingMaskIntoConstraints="NO" id="w17-pj-YYW">
                                         <rect key="frame" x="0.0" y="107" width="600" height="93"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAL-9A-FSR">
-                                                <rect key="frame" x="180" y="25" width="60" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="60" id="5hr-l8-bTn"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <state key="normal" title="Phone"/>
-                                                <connections>
-                                                    <action selector="phoneButtonPressed:" destination="MLF-uK-pZP" eventType="touchUpInside" id="baj-uw-WMP"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSx-uI-KW9">
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSx-uI-KW9" customClass="UICustomButton">
                                                 <rect key="frame" x="365" y="25" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="1OF-gV-fFp"/>
@@ -163,7 +152,7 @@
                                                     <action selector="thumbButtonPressed:" destination="MLF-uK-pZP" eventType="touchUpInside" id="Bov-59-xcb"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UV-1O-vOP">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UV-1O-vOP" customClass="UICustomButton">
                                                 <rect key="frame" x="270" y="25" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="gL3-fy-4eW"/>
@@ -182,6 +171,17 @@
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="60" placeholderIntrinsicHeight="60" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAL-9A-FSR" customClass="UICustomButton">
+                                                <rect key="frame" x="180" y="25" width="60" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="5hr-l8-bTn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Phone"/>
+                                                <connections>
+                                                    <action selector="phoneButtonPressed:" destination="MLF-uK-pZP" eventType="touchUpInside" id="baj-uw-WMP"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="93" id="2Pz-Uc-X1W"/>
@@ -274,7 +274,7 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Yw6-I7-fTc">
-                        <barButtonItem key="leftBarButtonItem" title="backBtn" id="ipf-yT-5sF"/>
+                        <barButtonItem key="leftBarButtonItem" title="backBtn" id="ipf-yT-5sF" customClass="UICustomMenuButton"/>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -443,7 +443,7 @@
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="166" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-Cg-ft2">
                                 <rect key="frame" x="20" y="246" width="560" height="166"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEq-A8-b2P">
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEq-A8-b2P" customClass="UICustomButton">
                                         <rect key="frame" x="0.0" y="58" width="560" height="50"/>
                                         <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -454,7 +454,7 @@
                                             <action selector="twitter_Clicked:" destination="yoV-KK-Ipl" eventType="touchUpInside" id="RSP-aO-1Ps"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asr-dM-pkM">
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asr-dM-pkM" customClass="UICustomButton">
                                         <rect key="frame" x="0.0" y="116" width="560" height="50"/>
                                         <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -465,7 +465,7 @@
                                             <action selector="linkedIn_Clicked:" destination="yoV-KK-Ipl" eventType="touchUpInside" id="8zI-JJ-qTC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-fL-Htf">
+                                    <button opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="50" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEj-fL-Htf" customClass="UICustomButton">
                                         <rect key="frame" x="0.0" y="0.0" width="560" height="50"/>
                                         <color key="backgroundColor" red="0.1333333333" green="0.85882352939999995" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -592,7 +592,7 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Login" id="m8b-0k-cxC">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="oJe-Xy-wSY"/>
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="oJe-Xy-wSY" customClass="UICustomMenuButton"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="DMw-0L-mhR" id="pEO-2K-ac5"/>

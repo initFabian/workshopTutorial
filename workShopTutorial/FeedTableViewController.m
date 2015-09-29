@@ -11,7 +11,6 @@
 #import "FeedObj.h"
 #import "DetailViewController.h"
 
-#warning FIX: Button(Sidebar)
 #warning FIX: API Call
 #import "config.h"
 
@@ -19,7 +18,7 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 @interface FeedTableViewController () {
     ApiManager *ApiObj;
 }
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *sideBarMenuBtn;
+@property (strong, nonatomic) IBOutlet UICustomMenuButton *sideBarMenuBtn;
 
 @end
 
@@ -33,15 +32,8 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *attributes = @{
-                                 NSForegroundColorAttributeName: subColor,
-                                 NSFontAttributeName: [UIFont fontWithName:kFontAwesomeFamilyName size:20.0f]
-                                 };
-    
-    [_sideBarMenuBtn setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    _sideBarMenuBtn.title = [NSString fontAwesomeIconStringForEnum:FABars];
-    [_sideBarMenuBtn setAction:@selector(revealToggle:)];
-    [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
+    [_sideBarMenuBtn IconAs:FABars withAction:@selector(revealToggle:)];
+
     
     [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
     [self preferredStatusBarStyle];

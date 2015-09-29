@@ -9,15 +9,14 @@
 #import "FormViewController.h"
 #import "config.h"
 
-#warning FIX: Buttons(DupCode)
 @interface FormViewController ()
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarMenuBtn;
+@property (weak, nonatomic) IBOutlet UICustomMenuButton *sideBarMenuBtn;
 @property (weak, nonatomic) IBOutlet UITextField *emailTextField;
 @property (weak, nonatomic) IBOutlet UITextField *pwdTextField;
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
-@property (weak, nonatomic) IBOutlet UIButton *fbButton;
-@property (weak, nonatomic) IBOutlet UIButton *twitterButton;
-@property (weak, nonatomic) IBOutlet UIButton *linkedInButton;
+@property (weak, nonatomic) IBOutlet UICustomButton *fbButton;
+@property (weak, nonatomic) IBOutlet UICustomButton *twitterButton;
+@property (weak, nonatomic) IBOutlet UICustomButton *linkedInButton;
 
 @end
 
@@ -32,34 +31,20 @@
     // Do any additional setup after loading the view.
     _emailTextField.delegate = self;
     _pwdTextField.delegate = self;
-    NSDictionary *attributes = @{
-                                 NSForegroundColorAttributeName: subColor,
-                                 NSFontAttributeName: [UIFont fontWithName:kFontAwesomeFamilyName size:20.0f]
-                                 };
     
-    [_sideBarMenuBtn setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    _sideBarMenuBtn.title = [NSString fontAwesomeIconStringForEnum:FABars];
-    [_sideBarMenuBtn setAction:@selector(revealToggle:)];
+    [_sideBarMenuBtn IconAs:FABars withAction:@selector(revealToggle:)];
+
     [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
     
     self.navigationController.navigationBar.barTintColor = baseColor;
 
+    
     [_loginButton setBackgroundColor: subColor];
     
-    _fbButton.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    [_fbButton setTitle:[NSString stringWithFormat:@"%@  %@",[NSString fontAwesomeIconStringForEnum:FAFacebook],@"Connect with Facebook"] forState:UIControlStateNormal];
-    [_fbButton setTitleColor: whiteColor forState:UIControlStateHighlighted];
-    [_fbButton setBackgroundColor:facebookColor];
-
-    _twitterButton.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    [_twitterButton setTitle:[NSString stringWithFormat:@"%@  %@",[NSString fontAwesomeIconStringForEnum:FATwitter],@"Connect with Twitter"] forState:UIControlStateNormal];
-    [_twitterButton setTitleColor:whiteColor forState:UIControlStateHighlighted];
-    [_twitterButton setBackgroundColor:twitterColor];
-
-    _linkedInButton.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    [_linkedInButton setTitle:[NSString stringWithFormat:@"%@  %@",[NSString fontAwesomeIconStringForEnum:FALinkedin],@"Connect with LinkedIn"] forState:UIControlStateNormal];
-    [_linkedInButton setTitleColor:whiteColor forState:UIControlStateHighlighted];
-    [_linkedInButton setBackgroundColor:linkedInColor];
+    [_fbButton SocialMediaBtnWithIcon:FAFacebook andTitle:@"Connect with Facebook" andColor:facebookColor];
+    [_twitterButton SocialMediaBtnWithIcon:FATwitter andTitle:@"Connect with Twitter" andColor:twitterColor];
+    [_linkedInButton SocialMediaBtnWithIcon:FALinkedin andTitle:@"Connect with LinkedIn" andColor:linkedInColor];
+    
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {

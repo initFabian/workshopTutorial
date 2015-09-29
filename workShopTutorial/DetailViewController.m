@@ -9,16 +9,15 @@
 #import "DetailViewController.h"
 #import "FeedTableViewController.h"
 
-#warning FIX: Buttons(DupCode)
 #import "config.h"
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UIView *topView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *backButton; //FIXME: UIMenuBtn *backButton
+@property (weak, nonatomic) IBOutlet UICustomMenuButton *backButton;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
-@property (weak, nonatomic) IBOutlet UIButton *phoneBtn; //FIXME: UIIconBtn *phoneBtn
-@property (weak, nonatomic) IBOutlet UIButton *emailBtn; //FIXME: UIIconBtn *emailBtn
-@property (weak, nonatomic) IBOutlet UIButton *thumbsBtn; //FIXME: UIIconBtn *thumbsBtn
+@property (weak, nonatomic) IBOutlet UICustomButton *phoneBtn;
+@property (weak, nonatomic) IBOutlet UICustomButton *emailBtn;
+@property (weak, nonatomic) IBOutlet UICustomButton *thumbsBtn;
 @property (weak, nonatomic) IBOutlet UILabel *aboutText;
 @property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
@@ -33,40 +32,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSDictionary *attributes = @{
-                                 NSForegroundColorAttributeName: subColor,
-                                 NSFontAttributeName: [UIFont fontWithName:kFontAwesomeFamilyName size:20.0f]
-                                 };
-
-    [backButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    backButton.title = [NSString fontAwesomeIconStringForEnum:FAChevronLeft];
-    [backButton setAction:@selector(popViewControllerAnimated:)];
+    
+    [backButton IconAs:FAChevronLeft withAction:@selector(popViewControllerAnimated:)];
+    
     [[self navigationItem] setBackBarButtonItem:backButton];
 
-//    FIXME: REPEATIVE CODE!
-    _phoneBtn.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    _phoneBtn.clipsToBounds = YES;
-    _phoneBtn.layer.cornerRadius = 60.0f/2.0f;
-    _phoneBtn.layer.borderColor = _phoneBtn.titleLabel.textColor.CGColor;
-    [_phoneBtn setTitle:[NSString fontAwesomeIconStringForEnum:FAPhone] forState:UIControlStateNormal];
-    _phoneBtn.tintColor = whiteColor;
-    _phoneBtn.backgroundColor = baseComplementColor;
-
-    _emailBtn.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    _emailBtn.clipsToBounds = YES;
-    _emailBtn.layer.cornerRadius = 60.0f/2.0f;
-    _emailBtn.layer.borderColor = _emailBtn.titleLabel.textColor.CGColor;
-    [_emailBtn setTitle:[NSString fontAwesomeIconStringForEnum:FAEnvelope] forState:UIControlStateNormal];
-    _emailBtn.tintColor = whiteColor;
-    _emailBtn.backgroundColor = baseComplementColor;
-
-    _thumbsBtn.titleLabel.font = [UIFont fontWithName:kFontAwesomeFamilyName size:20];
-    _thumbsBtn.clipsToBounds = YES;
-    _thumbsBtn.layer.cornerRadius = 60.0f/2.0f;
-    _thumbsBtn.layer.borderColor = _thumbsBtn.titleLabel.textColor.CGColor;
-    [_thumbsBtn setTitle:[NSString fontAwesomeIconStringForEnum:FAThumbsUp] forState:UIControlStateNormal];
-    _thumbsBtn.tintColor = whiteColor;
-    _thumbsBtn.backgroundColor = baseComplementColor;
+    [_phoneBtn CircleBtnWithIcon:FAPhone];
+    [_emailBtn CircleBtnWithIcon:FAEnvelope];
+    [_thumbsBtn CircleBtnWithIcon:FAThumbsUp];
 
 
     self.view.backgroundColor = baseColor;
