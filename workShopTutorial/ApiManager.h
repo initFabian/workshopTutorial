@@ -14,6 +14,6 @@
     void (^_dataHandler)(bool error, NSMutableArray *response);
 }
 
-- (void) getDataWithURL:(NSString *)urlString
-         uponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
+- (void) getFeedUponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
+
 @end

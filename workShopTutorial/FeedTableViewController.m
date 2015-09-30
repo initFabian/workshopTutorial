@@ -11,7 +11,6 @@
 #import "FeedObj.h"
 #import "DetailViewController.h"
 
-#warning FIX: API Call
 #import "config.h"
 
 static NSString * const FeedCellIdentifier = @"FeedCell";
@@ -37,8 +36,8 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
     
     [[self navigationItem] setBackBarButtonItem:_sideBarMenuBtn];
     [self preferredStatusBarStyle];
-    ApiObj = [ApiManager new];
     feedArray = [NSMutableArray new];
+    ApiObj = [ApiManager new];
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController ) {
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
@@ -76,12 +75,14 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
 
 - (void)getFeedData {
     __block FeedTableViewController *weakSelf = self;
-//FIXME: embedded URL
-    [ApiObj getDataWithURL:@"http://beta.json-generator.com/api/json/get/4y6GQQCT" uponCompletion:^(NSError *error, NSMutableArray *response) {
+    
+    
+    [ApiObj getFeedUponCompletion:^(NSError *error, NSMutableArray *response) {
         if (error) {
             NSLog(@"ERROR:%@",error);
         } else {
             dispatch_async(dispatch_get_main_queue(), ^{
+                NSMutableArray *tempArr = [NSMutableArray new];
                 
                 for (NSDictionary *responseObj in response) {
                     NSString *username = [responseObj objectForKey:@"username"];
@@ -90,9 +91,9 @@ static NSString * const FeedCellIdentifier = @"FeedCell";
                     NSString *aboutText = [responseObj objectForKey:@"about"];
                     NSString *imageUrl = [responseObj objectForKey:@"picture_large"];
                     FeedObj *obj = [[FeedObj alloc] initWithUserName:username andFirstName:firstname andLastName:lastname andAbout:aboutText andImgURL:imageUrl];
-                    [weakSelf.feedArray addObject:obj];
+                    [tempArr addObject:obj];
                 }
-                
+                weakSelf.feedArray = [NSMutableArray arrayWithArray:tempArr];
                 [weakSelf.refreshControl endRefreshing];
                 // Reload table data
                 [weakSelf.tableView reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];

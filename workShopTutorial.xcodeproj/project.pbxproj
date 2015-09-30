@@ -63,6 +63,7 @@
 		3139775D1BBB348C0038479A /* UICustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomButton.m; sourceTree = "<group>"; };
 		3139775F1BBB34A30038479A /* UICustomMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICustomMenuButton.h; sourceTree = "<group>"; };
 		313977601BBB34A30038479A /* UICustomMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICustomMenuButton.m; sourceTree = "<group>"; };
+		313977621BBB47CA0038479A /* ApiEndPoints.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ApiEndPoints.h; sourceTree = "<group>"; };
 		31A69FBE1BB31C5C00E8B6BA /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		31A69FC71BB3D88A00E8B6BA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -201,6 +202,7 @@
 			children = (
 				31E726121BB9113D00CB021B /* ApiManager.h */,
 				31E726131BB9113D00CB021B /* ApiManager.m */,
+				313977621BBB47CA0038479A /* ApiEndPoints.h */,
 				31B77E331BB9F927004A0F69 /* Colors.h */,
 				31B77E341BB9F931004A0F69 /* Config.h */,
 				3139775C1BBB348C0038479A /* UICustomButton.h */,

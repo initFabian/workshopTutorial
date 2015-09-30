@@ -690,3 +690,200 @@ Once finishing that, you may then delete the `#warning FIX:Button` warnings. We'
 
 
 #<a name="chapter-3"></a>Chapter 3
+
+Just like last time, if you want to sync up your repository, run the following command:
+
+```bash
+$ git checkout Chapter3 -f
+```
+
+In Chapter 3 we're not going to be jumping around in many files, I promise. The only files we are going to need for this chapter are:
+
+- FeedTableViewController.m
+- ApiManager.m
+- ApiEndPoints.h(new header file)
+
+First, let's move into our `FeedTableViewController.m`. We are going to focus on a particular method, `getFeedData`. One of the most common mistakes beginner mobile developers do, and that is to embed the URL straight into the Controller. Yeah we only have one API call, but what if you had 10, 20, or 30 API calls in your app and you needed to change 1 letter in your URL? You're going to need to update all of them. 
+
+The next part I didn't learn until I got to backend development. It's common practice to have a production server, development server, and staging server. Developing on the production server is a **big no-no!** I know someone who did that once.... he's dead. Ok, totally kidding. So what's the best way to fix this? 
+
+Well how about we move this URL into our `ApiEndPoints.h`? Ehhh.... that's a start. Let's do that and we'll comeback to this. Add the following line to your `ApiEndPoints.h`:
+
+#### ApiEndPoints.h
+
+```objective-c
+//
+//  ApiEndPoints.h
+//  workShopTutorial
+//
+//  Created by Fabian Buentello on 9/29/15.
+//  Copyright © 2015 Fabian Buentello. All rights reserved.
+//
+
+#ifndef ApiEndPoints_h
+#define ApiEndPoints_h
+
+#define getFeed_URL @"http://beta.json-generator.com/api/json/get/4y6GQQCT"
+
+#endif /* ApiEndPoints_h */
+
+```
+Next we are going to import `ApiEndPoints.h` directly into our `ApiManager.m`. It's important that we import it into the `.m` file or else the entire app will have access to these end points and we don't want that. Just our `ApiManager` should have access to them. 
+
+#### ApiManager.m
+```objective-c
+#import "ApiEndPoints.h"
+```
+
+With that set, Let's go back to our `FeedTableViewController.m` and replace the embedded url with `getFeed_Url`:
+
+
+#### FeedTableViewController.m
+
+```objective-c
+- (void)getFeedData {
+    __block FeedTableViewController *weakSelf = self;
+
+    [ApiObj getDataWithURL:getFeed_URL uponCompletion:^(NSError *error, NSMutableArray *response) {
+		
+		...        
+		
+    }];
+}
+```
+Well dang... I don't know about you, but I got an error inside of `FeedTableViewController.m`:
+
+![getFeed_URL error](./images/Ch3_1_error.png)
+
+Since we're importing `ApiEndPoints.h` inside of `ApiManager.m`, our `FeedTableController` does not have access to it.
+Now that I think of it, we shouldn't even be putting `getFeed_URL` inside of `FeedTableViewController`. Since we don't want this method to get anything else but the feed data, let's just rename `getDataWithURL:uponCompletion:` to `getFeedUponCompletion:` and use `getFeed_URL` directly into our `ApiManager`.
+
+#### ApiManager.h
+
+```objective-c
+#import <Foundation/Foundation.h>
+
+@interface ApiManager : NSObject {
+    void (^_completionHandler)(NSError *err, NSMutableArray *response);
+    void (^_dataHandler)(bool error, NSMutableArray *response);
+}
+
+- (void) getFeedUponCompletion:(void(^)(NSError *err, NSMutableArray *response))handler;
+@end
+```
+
+#### ApiManager.m
+
+```objective-c
+...
+
+#import "config.h"
+
+...
+
+...
+
+-(void)getFeedUponCompletion:(void (^)(NSError *err, NSMutableArray *response))handler {
+    _dataHandler = [handler copy];
+    NSURLSession *sess = [self mySession];
+    
+    NSMutableURLRequest *req = [self myRequestWithURL:getFeed_URL];
+
+	...
+}
+```
+
+Now let's go back `FeedTableViewController.m` to update our code to call `getFeedUponCompletion:`
+
+#### FeedTableViewController
+
+```objective-c
+
+...
+
+- (void)getFeedData {
+    __block FeedTableViewController *weakSelf = self;
+
+    [ApiObj getFeedUponCompletion:^(NSError *error, NSMutableArray *response) {
+        if (error) {
+        ...
+    ];
+}
+```
+So now our method `getFeedData` will only be able to get feed data, which is what we want. This is perfect! Go ahead and remove the `#warning FIX: API Call` inside of `FeedTableViewController.m` and run the app to make sure everything is working as it should.
+
+Let's go back to `ApiEndPoints.h`, remember how I was talking about Production/Development/Staging servers? Well as it stands right now, we're pulling from our production url, we need to at least be able to switch between production and development. I'm going to show you a quick and easy way to do just that, inside of  `ApiEndPoints.h`, replace everything with the following:
+
+```objective-c
+#ifndef ApiEndPoints_h
+#define ApiEndPoints_h
+
+#ifdef DEBUG //Developing
+
+    #define API_ENDPOINT_HOST @"http://beta.json-generator.com"
+
+#else //Production
+
+    #define API_ENDPOINT_HOST @"http://beta.json-generator.com/production" //dummy url, doesnt work
+
+#endif
+
+// Feed routes
+#define getFeed_URL    (API_ENDPOINT_HOST @"/api/json/get/4y6GQQCT")
+#define postComment_URL    (API_URL @"/api/user/:uid/post/:pid/comment/") //dummy url, doesnt work
+
+
+// User routes
+#define getUserInfo_URL     (API_URL @"/api/user/:uid/info") //dummy url, doesnt work
+#define deleteUser_URL     (API_URL @"/api/user/:uid/delete") //dummy url, doesnt work
+
+
+#endif /* ApiEndPoints_h */
+
+
+```
+
+There are better much safer ways to do this using `xcConfig` files, but that's another tutorial for another day.
+
+What about `#warning NEEDS FIXING`? Why aren't we removing that just yet? This is the most important thing I've learned in my years of developing... **If something has been built already, and built correctly, there is absolutely no sense to rebuild it.** If you don't know what are some popular frameworks are ask friends, go on Stackoverflow and ask, do something! Because the last thing you want to do is release something that can be broken. 
+
+Instead of using this half built API interface(`ApiManager`), we're going to use a popular Networking framework called `APNetworking`. So check this out, open up your `Podfile` and uncomment the `AFNetworking` line and in your terminal, run the following command:
+
+```bash
+$ pod install
+```
+
+Let's open up `ApiManager.m`, you see all that code?! we're about to shrink it down to a third of that. Replace all the code with the following:
+
+#### ApiManager.m
+
+```objective-c
+#import "ApiManager.h"
+#import "ApiEndPoints.h"
+#import "AFNetworking.h"
+
+@implementation ApiManager {
+    AFHTTPRequestOperationManager *manager;
+}
+
+-(id) init {
+    manager = [AFHTTPRequestOperationManager manager];
+    return self;
+}
+
+/**
+ *  Gets Feed Data
+ *
+ *  @return CallBack
+ */
+-(void)getFeedUponCompletion:(void (^)(NSError *err, NSMutableArray *response))handler {
+    _completionHandler = [handler copy];
+    [manager GET:getFeed_URL parameters:nil success:^(AFHTTPRequestOperation *operation, id response) {
+        _completionHandler(nil,response);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        _completionHandler(error,nil);
+    }];
+}
+@end
+
+```
