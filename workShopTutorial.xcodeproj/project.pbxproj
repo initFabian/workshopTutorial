@@ -18,15 +18,15 @@
 		3130166A1BAAC14A00272B0A /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 313016691BAAC14A00272B0A /* FeedCell.m */; };
 		3130166F1BAAC81500272B0A /* FeedObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 3130166E1BAAC81500272B0A /* FeedObj.m */; };
 		313016711BAACDB400272B0A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 313016701BAACDB400272B0A /* placeholder.png */; };
-		3139775E1BBB348C0038479A /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3139775D1BBB348C0038479A /* UICustomButton.m */; settings = {ASSET_TAGS = (); }; };
-		313977611BBB34A30038479A /* UICustomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 313977601BBB34A30038479A /* UICustomMenuButton.m */; settings = {ASSET_TAGS = (); }; };
-		31A69FC01BB31C5C00E8B6BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FC81BB3D88A00E8B6BA /* SWRevealViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FCB1BB3D8B800E8B6BA /* SidebarViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31A69FD91BB3DAB700E8B6BA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD71BB3DAB700E8B6BA /* menu.png */; settings = {ASSET_TAGS = (); }; };
-		31A69FDA1BB3DAB700E8B6BA /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD81BB3DAB700E8B6BA /* menu@2x.png */; settings = {ASSET_TAGS = (); }; };
-		31A69FDF1BB3E95600E8B6BA /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FDE1BB3E95600E8B6BA /* FormViewController.m */; settings = {ASSET_TAGS = (); }; };
-		31E726141BB9113D00CB021B /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E726131BB9113D00CB021B /* ApiManager.m */; settings = {ASSET_TAGS = (); }; };
+		3139775E1BBB348C0038479A /* UICustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3139775D1BBB348C0038479A /* UICustomButton.m */; };
+		313977611BBB34A30038479A /* UICustomMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 313977601BBB34A30038479A /* UICustomMenuButton.m */; };
+		31A69FC01BB31C5C00E8B6BA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FBF1BB31C5C00E8B6BA /* DetailViewController.m */; };
+		31A69FC91BB3D88A00E8B6BA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FC81BB3D88A00E8B6BA /* SWRevealViewController.m */; };
+		31A69FD11BB3D8B800E8B6BA /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FCB1BB3D8B800E8B6BA /* SidebarViewController.m */; };
+		31A69FD91BB3DAB700E8B6BA /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD71BB3DAB700E8B6BA /* menu.png */; };
+		31A69FDA1BB3DAB700E8B6BA /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A69FD81BB3DAB700E8B6BA /* menu@2x.png */; };
+		31A69FDF1BB3E95600E8B6BA /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31A69FDE1BB3E95600E8B6BA /* FormViewController.m */; };
+		31E726141BB9113D00CB021B /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E726131BB9113D00CB021B /* ApiManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,11 +297,13 @@
 		313016311BAABD3700272B0A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Fabian Buentello";
 				TargetAttributes = {
 					313016381BAABD3700272B0A = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = H367AL682C;
 					};
 					313016511BAABD3700272B0A = {
 						CreatedOnToolsVersion = 6.4;
@@ -530,6 +532,7 @@
 			baseConfigurationReference = B87BA06A341023056F36C16F /* Pods-workShopTutorial.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[sdk=*]" = "";
 				INFOPLIST_FILE = workShopTutorial/Info.plist;
@@ -537,6 +540,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Buentello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "workShopTutorial/workShopTutorial-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -545,6 +550,7 @@
 			baseConfigurationReference = 2301150BCD6CBACC10994C44 /* Pods-workShopTutorial.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = workShopTutorial/Info.plist;
@@ -552,6 +558,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Buentello.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "workShopTutorial/workShopTutorial-Bridging-Header.h";
 			};
 			name = Release;
 		};
