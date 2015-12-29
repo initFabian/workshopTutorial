@@ -894,3 +894,33 @@ Let's open up `ApiManager.m`, you see all that code?! we're about to shrink it d
 @end
 
 ```
+
+
+
+## Links
+
+[Allow HTTP calls in Apps](http://stackoverflow.com/a/30907070)
+
+[**Cocoapods**](https://cocoapods.org/)
+
+ - [AFNetworking cocoapod](https://cocoapods.org/pods/AFNetworking)
+ - [FontAwesome cocoapod](https://cocoapods.org/pods/TYPFontAwesome)
+ - [FontAwesome icons](http://fontawesome.io/icons/)
+
+**Design**
+
+ - [iOS Fonts](http://iosfonts.com/)
+ - [Color Swatches](https://color.adobe.com/create/color-wheel/)
+ - [Ace Designs](https://visualhierarchy.co/shop/product/ace-mobile-ios-8-ui-kit/)
+ - [Mega Designs](http://www.appdesignvault.com/mega-ios-app-design-kit/)
+ - [invisonApp Design](http://www.invisionapp.com/now?utm_source=facebook&utm_medium=paid_social&utm_term=Lookalike_NowConversionPixel_US&utm_content=Now2f&utm_c- ampaign=NOWkit)
+ - [pttrns](http://pttrns.com/?did=1&scid=11)
+ - [designmaz](https://www.designmaz.net/best-free-psd-flat-ui-kits/)
+
+**Tutorials**
+
+ - [Auto Layout tutorial(basics) by mobileoop](http://mobileoop.com/how-to-use-auto-layout-in-xcode-6-for-ios-7-and-8-development)
+ - [Auto Layout tutorial(advanced) by mobileoop](http://mobileoop.com/auto-layout-advanced-techniques-for-ios-8-and-7-using-xcode-6-on-storyboard)
+ - [Ray wenderlich Auto layout tutorial](http://www.raywenderlich.com/73602/dynamic-table-view-cell-height-auto-layout)
+ - [Ray wenderlich AutoLayout video](https://www.youtube.com/watch?v=J10vzrTcswI)
+ - [Slideout tutorial](http://www.appcoda.com/ios-programming-sidebar-navigation-menu/)
