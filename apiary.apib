@@ -1,0 +1,731 @@
+FORMAT: 1A
+HOST: http://initfabian.apiblueprint.org/
+
+# Routable
+
+## Posts [/posts]
+
+<!-- LIST POSTS -->
+### List Posts [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Post 1",
+                "creator": "user2",
+                "comments": [
+                    {
+                        "comment_id": "1",
+                        "comment": "This is my Comment 1"
+                    }, {
+                        "comment_id": "2",
+                        "comment": "This is my Comment 2"
+                    }, {
+                        "comment_id": "3",
+                        "comment": "This is my Comment 3"
+                    }, {
+                        "comment_id": "4",
+                        "comment": "This is my Comment 4"
+                    }
+                ]
+            },
+            {
+                "title": "Post 2",
+                "creator": "user2",
+                "comments": [
+                    {
+                        "comment_id": "1",
+                        "comment": "This is my Comment 1"
+                    }, {
+                        "comment_id": "2",
+                        "comment": "This is my Comment 2"
+                    }, {
+                        "comment_id": "3",
+                        "comment": "This is my Comment 3"
+                    }, {
+                        "comment_id": "4",
+                        "comment": "This is my Comment 4"
+                    }
+                ]
+            }
+        ]
+
+
+### Create Post [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}
+
+    + Body
+
+            {
+                "post": "My new Post",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+
+
+## Posts [/posts/]
+
+<!-- LIST POSTS -->
+### List Posts with Dash [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "title": "Post 1",
+                "creator": "user2",
+                "comments": [
+                    {
+                        "comment_id": "1",
+                        "comment": "This is my Comment 1"
+                    }, {
+                        "comment_id": "2",
+                        "comment": "This is my Comment 2"
+                    }, {
+                        "comment_id": "3",
+                        "comment": "This is my Comment 3"
+                    }, {
+                        "comment_id": "4",
+                        "comment": "This is my Comment 4"
+                    }
+                ]
+            },
+            {
+                "title": "Post 2",
+                "creator": "user2",
+                "comments": [
+                    {
+                        "comment_id": "1",
+                        "comment": "This is my Comment 1"
+                    }, {
+                        "comment_id": "2",
+                        "comment": "This is my Comment 2"
+                    }, {
+                        "comment_id": "3",
+                        "comment": "This is my Comment 3"
+                    }, {
+                        "comment_id": "4",
+                        "comment": "This is my Comment 4"
+                    }
+                ]
+            }
+        ]
+
+
+### Create Post with Dash [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}
+
+    + Body
+
+            {
+                "post": "My new Post",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+## Single Post [/posts/{post_id}]
+
+### Get Post [GET]
+
++ Response 200 (application/json)
+
+        {
+            "title": "Post 2",
+            "creator": "user2",
+            "comments": [
+                {
+                    "comment_id": "1",
+                    "comment": "This is my Comment 1"
+                }, {
+                    "comment_id": "2",
+                    "comment": "This is my Comment 2"
+                }, {
+                    "comment_id": "3",
+                    "comment": "This is my Comment 3"
+                }, {
+                    "comment_id": "4",
+                    "comment": "This is my Comment 4"
+                }
+            ]
+        }
+
+###  Update Post [PUT]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}
+
+    + Body
+
+            {
+                "post": "My new Updated Post",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+###  Delete Post [DELETE]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}
+
+    + Body
+
+            {
+                "post": "My new Deleted Post",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+
+## Comments [/posts/{post_id}/comments/]
+
+<!-- LIST POSTS -->
+### List Comments [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "comment_id": "1",
+                "comment": "This is my Comment 1"
+            }, {
+                "comment_id": "2",
+                "comment": "This is my Comment 2"
+            }, {
+                "comment_id": "3",
+                "comment": "This is my Comment 3"
+            }, {
+                "comment_id": "4",
+                "comment": "This is my Comment 4"
+            }
+        ]
+
+
+### Create Comment [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/comments/{comment_id}
+
+    + Body
+
+            {
+                "comment": "My new Comment",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+## Single Comment [/posts/{post_id}/comments/{comment_id}]
+
+### Get Comment [GET]
+
++ Response 200 (application/json)
+
+        {
+            "comment_id": "2",
+            "creator": "user2"
+        }
+
+###  Update Comment [PUT]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}/comments/{comment_id}
+
+    + Body
+
+            {
+                "comment": "My new Updated Comment",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+###  Delete Comment [DELETE]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /posts/{post_id}/comments/{comment_id}
+
+    + Body
+
+            {
+                "comment": "My Deleted Comment",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+## User [/users/]
+
+### List User with Dash [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    }
+                ]
+            },
+            {
+                "user_id": "3",
+                "first_name": "Fake",
+                "last_name": "User",
+                "Accounts": []
+            }
+        ]
+
+
+### Create User with Dash [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    }
+                ]
+            }
+
+
+## User [/users]
+
+### List User [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    }
+                ]
+            },
+            {
+                "user_id": "3",
+                "first_name": "Fake",
+                "last_name": "User",
+                "Accounts": []
+            }
+        ]
+
+
+### Create User [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    }
+                ]
+            }
+
+## Single User [/users/2]
+
+### Get User [GET]
+
++ Response 200 (application/json)
+
+        {
+            "user_id": "2",
+            "first_name": "Fabian",
+            "last_name": "Buentello",
+            "Accounts": [
+                {
+                    "type": "twitter",
+                    "account": "@initFabian"
+                },
+                {
+                    "type": "github",
+                    "account": "initFabian"
+                }
+            ]
+        }
+
+###  Update User [PUT]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    },
+                    {
+                        "type": "fake_account",
+                        "account": "initFabian"
+                    }
+                ]
+            }
+
+
+###  Delete User [DELETE]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/2
+
+    + Body
+
+            {
+                "user_id": "2",
+                "first_name": "Fabian",
+                "last_name": "Buentello",
+                "Accounts": [
+                    {
+                        "type": "twitter",
+                        "account": "@initFabian"
+                    },
+                    {
+                        "type": "github",
+                        "account": "initFabian"
+                    }
+                ]
+            }
+
+## Pictures [/users/{user_input}/pictures/]
+
+### List Pictures [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "picture_id": "1",
+                "picture": "This is my Picture 1"
+            }, {
+                "picture_id": "2",
+                "picture": "This is my Picture 2"
+            }, {
+                "picture_id": "3",
+                "picture": "This is my Picture 3"
+            }, {
+                "picture_id": "4",
+                "picture": "This is my Picture 4"
+            }
+        ]
+
+
+### Create Picture [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/pictures
+
+    + Body
+
+            {
+                "picture": "My new Picture",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+## Single Picture [/users/{user_input}/pictures/{picture_id}]
+
+### Get Picture [GET]
+
++ Response 200 (application/json)
+
+        {
+            "picture_id": "2",
+            "creator": "user2"
+        }
+
+###  Update Picture [PUT]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/pictures/{picture_id}
+
+    + Body
+
+            {
+                "picture": "My new Updated Picture",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+###  Delete Picture [DELETE]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/pictures/{picture_id}
+
+    + Body
+
+            {
+                "picture": "My Deleted Picture",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+## Statuses [/users/{user_input}/statuses/]
+
+### List Statuses [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "status_id": "1",
+                "status": "This is my Status 1"
+            }, {
+                "status_id": "2",
+                "status": "This is my Status 2"
+            }, {
+                "status_id": "3",
+                "status": "This is my Status 3"
+            }, {
+                "status_id": "4",
+                "status": "This is my Status 4"
+            }
+        ]
+
+
+### Create Status [POST]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/statuses/{status_id}
+
+    + Body
+
+            {
+                "status": "My new Status",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+## Single Status [/users/{user_input}/statuses/{status_id}]
+
+### Get Status [GET]
+
++ Response 200 (application/json)
+
+        {
+            "status_id": "2",
+            "creator": "user2"
+        }
+
+###  Update Status [PUT]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/statuses/{status_id}
+
+    + Body
+
+            {
+                "status": "My new Updated Status",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
+
+
+###  Delete Status [DELETE]
+
+
++ Request (application/json)
+
+        {}
+
++ Response 201 (application/json)
+
+    + Headers
+
+            Location: /users/{user_input}/statuses/{status_id}
+
+    + Body
+
+            {
+                "status": "My Deleted Status",
+                "creator": "user2",
+                "published_at": "2015-08-05T08:40:51.620Z"
+            }
